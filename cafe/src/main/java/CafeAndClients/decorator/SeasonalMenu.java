@@ -1,27 +1,25 @@
 package CafeAndClients.decorator;
 
+public  class SeasonalMenu extends Decorator{
 
-public class SeasonalMenu extends OrderDecorator {
+    Order order;
 
-    public SeasonalMenu(Order order) {
-        super(order);
+    public SeasonalMenu(Order order){
+        this.order = order;
     }
 
+    public SeasonalMenu() {
 
-    public String sendSeasonalMenu() {
-        System.out.println("Cезонное меню: " + "\n"
-                +"картошка: "+ POTATO  + "\n"
-                +"блинчики: "+ PANCAKES  + "\n"
-                +"суп: "+ SOUP + "\n" + "********************");
-        return "\nCумма: " + summaSeasonalMenu();
     }
 
-    public int summaSeasonalMenu(){
-        return POTATO + PANCAKES + SOUP;
+    public String getInfo() {
+        return  "Сезонное меню:" + "\n"
+                +"сосиски= " + SAUSAGES + "\n"
+                +"картошка= "+ POTATO  + "\n"
+                +"суп= "+ SOUP;
     }
 
-    @Override
-    public String makeOrder() {
-        return super.makeOrder() + sendSeasonalMenu();
+    public int getPrice() {
+        return SAUSAGES+POTATO+SOUP;
     }
 }

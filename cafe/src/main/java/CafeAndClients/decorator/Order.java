@@ -1,7 +1,11 @@
 package CafeAndClients.decorator;
 
-public interface Order {
+public abstract class Order implements Menu{
+    String name = "Simple order";
 
-    public String makeOrder();
-
+    public String getInfo(){
+        return name;
     }
+
+    public abstract int getPrice();
+}

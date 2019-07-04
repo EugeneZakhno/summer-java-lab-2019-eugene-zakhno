@@ -13,4 +13,7 @@ public class Memento {
     }
 
 
+    public String setState() {
+        return state;
+    }
 }

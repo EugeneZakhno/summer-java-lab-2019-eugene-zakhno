@@ -3,15 +3,13 @@ package CafeAndClients;
 import CafeAndClients.builder.Person;
 import CafeAndClients.decorator.*;
 import CafeAndClients.memento.Caretaker;
-import CafeAndClients.memento.Originator;
-
 
 public class Runner {
 
     public static void main(String[] args) {
 
 
-        //1 Builder
+
         Person myPerson = new Person.Builder()
                 .withName("Gena")
                 .withSurname("Petrov")
@@ -21,25 +19,41 @@ public class Runner {
                 .build();
                 System.out.println(myPerson.print());
 
-        //2 Decorator
-        Order myOwnOrder = new OwnMenu(new AllOrder());
-        System.out.println(myOwnOrder.makeOrder());
 
-        //3 Memento
-        OwnMenu ownMenu = new OwnMenu();
-        Originator originator = new Originator();
+        Order simpleOrder = new SimpleOrder();
+        System.out.println(simpleOrder.getInfo());
+        System.out.println("summa: " + simpleOrder.getPrice() + '\n');
+
+        simpleOrder = new CheefMenu(simpleOrder);
+        System.out.println(simpleOrder.getInfo());
+        System.out.println("summa: " +simpleOrder.getPrice()+ '\n');
+
+        simpleOrder = new SeasonalMenu(simpleOrder);
+        System.out.println(simpleOrder.getInfo());
+        System.out.println("summa: " +simpleOrder.getPrice()+ '\n');
+
+        Order ownOrder = new OwnOrder();
+        System.out.println(ownOrder.getInfo());
+        System.out.println("summa: " +ownOrder.getPrice()+ '\n');
+
+
+
+        OwnOrder ownOrderSave = new OwnOrder();
         Caretaker caretaker = new Caretaker();
+        ownOrderSave.setState("saving last order:");
 
-        originator.setState("saving last order");
-        System.out.printf("State is %s\n", originator.getState());
-        caretaker.setMemento(originator.saveState());
+        System.out.printf("State is saved %s\n", ownOrderSave.getState());
+        caretaker.add(ownOrderSave.saveState());
 
-        originator.setState("recovering last order");
-        System.out.printf("State is %s\n", originator.getState());
+        ownOrderSave.setState("recovering last order");
+        System.out.printf("State is recovering  %s\n", ownOrderSave.getState());
 
-        originator.restoreState(caretaker.getMemento());
-        System.out.printf("State is %s\n", originator.getState());
+        ownOrderSave.load(caretaker.get(0));
+        System.out.printf("State is recovered  %s\n", ownOrderSave.getState());
 
+        System.out.println("Add something new ");
+        System.out.println(ownOrder.getInfo());
+        System.out.println("summa: " +ownOrder.getPrice()+ '\n');
 
 
      }

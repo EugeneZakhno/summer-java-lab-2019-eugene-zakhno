@@ -1,26 +1,27 @@
 package CafeAndClients.decorator;
 
-public class CheefMenu extends OrderDecorator {
+public class CheefMenu extends Decorator{
 
-    public CheefMenu(Order order) {
-        super(order);
+    Order order;
+
+    public CheefMenu(Order order){
+        this.order = order;
     }
 
+    public CheefMenu() {
 
-    public String sendCheefMenu(){
-
-        System.out.println("Меню от шефповара: " + "\n"
-                +"мороженое: "+ ICECREAM  + "\n"
-                +"блинчики: "+ PANCAKES);
-        return "\nCумма: " + summaCheefMenu();
     }
 
-    public int summaCheefMenu() {
-        return ICECREAM + PANCAKES;
+    public String getInfo() {
+        return  "Меню от шеф-повара:" + "\n"
+                +"cалат= " + SALAD + "\n"
+                +"кофе= "+ COFFEE  + "\n"
+                +"мороженое= "+ ICECREAM  + "\n"
+                +"блинчики= "+ PANCAKES;
     }
 
-    @Override
-    public String makeOrder() {
-        return super.makeOrder() + sendCheefMenu();
+    public int getPrice() {
+        return SALAD+COFFEE+ICECREAM+PANCAKES;
     }
+
 }

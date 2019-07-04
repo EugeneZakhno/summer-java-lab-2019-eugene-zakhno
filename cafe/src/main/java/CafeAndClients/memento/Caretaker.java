@@ -1,14 +1,22 @@
 package CafeAndClients.memento;
 
+
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Caretaker {
 
-    private Memento memento;
 
-    public Memento getMemento() {
-        return memento;
+    private List<Memento> list = new ArrayList<Memento>();
+
+    public void add (Memento memento) {
+        list.add(memento);
+
     }
 
-    public void setMemento(Memento memento) {
-        this.memento = memento;
+    public Memento get (int index){
+        return list.get(index);
     }
+
 }
