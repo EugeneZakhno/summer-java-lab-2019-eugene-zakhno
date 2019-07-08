@@ -16,7 +16,7 @@ public class Today {
         SimpleDateFormat formatForDateLater = new SimpleDateFormat("dd MMMM ss HH yyyy mm", getDefault());
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(datePlusWeek);
-        calendar.add(Calendar.DAY_OF_WEEK, 7);
+        calendar.add(Calendar.DATE, 7);
         datePlusWeek = calendar.getTime();
         System.out.println( "Hello world + 1 week: " + formatForDateLater.format(datePlusWeek));
         }
