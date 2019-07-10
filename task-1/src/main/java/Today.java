@@ -11,14 +11,13 @@ public class Today {
         SimpleDateFormat formatForDateNow = new SimpleDateFormat("dd MMMM ss HH yyyy mm", getDefault());
         System.out.println("Hello world: " + formatForDateNow.format(dateNow));
 
-
         Date datePlusWeek = new Date();
         SimpleDateFormat formatForDateLater = new SimpleDateFormat("dd MMMM ss HH yyyy mm", getDefault());
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(datePlusWeek);
         calendar.add(Calendar.DATE, 7);
         datePlusWeek = calendar.getTime();
-        System.out.println( "Hello world + 1 week: " + formatForDateLater.format(datePlusWeek));
-        }
-
+        System.out.println("Hello world + 1 week: " + formatForDateLater.format(datePlusWeek));
     }
+
+}
