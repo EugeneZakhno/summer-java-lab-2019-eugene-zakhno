@@ -19,5 +19,4 @@ public class Today {
         datePlusWeek = calendar.getTime();
         System.out.println("Hello world + 1 week: " + formatForDateLater.format(datePlusWeek));
     }
-
 }
