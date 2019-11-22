@@ -5,7 +5,7 @@ import static java.util.Locale.getDefault;
 
 public class Today {
 
-    public static void main(String args[]) {
+    public static void main(String [] args) {
 
         Date dateNow = new Date();
         SimpleDateFormat formatForDateNow = new SimpleDateFormat("dd MMMM ss HH yyyy mm", getDefault());
