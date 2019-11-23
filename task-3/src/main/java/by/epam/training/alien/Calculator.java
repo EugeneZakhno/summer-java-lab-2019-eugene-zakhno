@@ -1,10 +1,11 @@
-package by.epam.training;
+package by.epam.training.alien;
 
 
 public class Calculator {
 
     double eval(final String str) {
         return new Object() {
+
             int pos = -1, ch;
 
             void nextChar() {
@@ -29,7 +30,7 @@ public class Calculator {
 
             double parseExpression() {
                 double x = parseTerm();
-                for (; ; ) {
+                for (;;) {
                     if (calc('+')) x += parseTerm();
                     else if (calc('-')) x -= parseTerm();
                     else return x;
@@ -52,6 +53,7 @@ public class Calculator {
 
                 if (calc('+')) return parseFactor();
                 if (calc('-')) return -parseFactor();
+
                 double x;
                 int startPos = this.pos;
                 if (calc('(')) {

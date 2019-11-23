@@ -1,4 +1,6 @@
-package by.epam.training;
+package by.epam.training.alien;
+
+import by.epam.training.alien.Calculator;
 
 import java.io.*;
 import java.util.regex.Pattern;
@@ -11,6 +13,7 @@ public class Runner {
         Calculator calculator = new Calculator();
 
         try (BufferedReader reader = new BufferedReader(new FileReader("./task-3/src/main/resources/input_1.txt"))) {
+
             while ((line = reader.readLine()) != null) {
 
                 expression = line.replaceAll(" ", "");
