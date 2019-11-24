@@ -7,7 +7,7 @@ public class Main {
 
         String line;
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("./task-3/src/main/resources/input_1.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(args[0]))) {
 
             while ((line = reader.readLine()) != null) {
                 System.out.println(line);
