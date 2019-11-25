@@ -4,11 +4,17 @@ public class Expressions {
 
     static void calculate (String line){
 
-        char [] ch = line.toCharArray();
+        String string = line.replaceAll(" ", "");
+        char [] ch = string.toCharArray();
 
         for (char c : ch) {
-            System.out.println(","+ c);
+            System.out.print(", "+ c);
         }
+
+
+
+
+
 
     }
 

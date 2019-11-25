@@ -9,16 +9,16 @@ public class Main {
 
         try (BufferedReader reader = new BufferedReader(new FileReader(args[0]))) {
 
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
-                Expressions.calculate(reader.readLine());
-            }
+                /*
+                    while ((line = reader.readLine()) != null) {
+                      System.out.println(line);
+                    }
+                */
 
+                while ((line = reader.readLine()) != null) {
 
-
-
-
-
+                    Expressions.calculate(line);
+                }
 
             } catch (IOException e) {
             e.printStackTrace();
