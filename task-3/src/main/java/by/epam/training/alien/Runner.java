@@ -1,7 +1,5 @@
 package by.epam.training.alien;
 
-import by.epam.training.alien.Calculator;
-
 import java.io.*;
 import java.util.regex.Pattern;
 

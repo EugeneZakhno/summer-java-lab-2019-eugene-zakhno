@@ -11,11 +11,16 @@ public class Main {
 
             while ((line = reader.readLine()) != null) {
                 System.out.println(line);
-
+                Expressions.calculate(reader.readLine());
             }
 
 
-        } catch (IOException e) {
+
+
+
+
+
+            } catch (IOException e) {
             e.printStackTrace();
         }
     }
