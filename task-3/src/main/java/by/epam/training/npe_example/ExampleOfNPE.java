@@ -15,7 +15,11 @@ public class ExampleOfNPE {
         System.out.println(name.length());
 
         // 2. Как бороться?
-        //
+        // 2.1 Не использовать явную инициализацию null
+
+        Integer value = null;
+        int size = value;
+
 
 
     }
