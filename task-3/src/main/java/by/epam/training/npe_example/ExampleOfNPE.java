@@ -11,7 +11,7 @@ public class ExampleOfNPE {
 
 
         // Это костыль
-        if(name != null)
+
         System.out.println(name.length());
 
         // 2. Как бороться?
