@@ -4,7 +4,7 @@ public class ExampleOfNPE {
 
     public static void main(String[] args) {
 
-        String name = null;
+        String name;
 
         // 1. Когда возникает ?
         //NPE возникает когда мы хотим вызвать метод через ссылку (переменную) иницилизированную как NULL;
