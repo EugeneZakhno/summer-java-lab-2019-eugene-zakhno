@@ -10,14 +10,18 @@ public class ExampleOfNPE {
         //NPE возникает когда мы хотим вызвать метод через ссылку (переменную) иницилизированную как NULL;
 
         // Это костыль
-        if(name!=null)
+        // Первый случай:
+        //if(name!=null)
         System.out.println(name.length());
 
         // 2. Как бороться?
-        // 2.1 Не использовать явную инициализацию null
+        // 2.1 Не использовать явную инициализацию null  т.е. так нельзя String name= null;
 
+        // Второй случай
         Integer value = null;
         int size = value;
+
+
 
 
 
