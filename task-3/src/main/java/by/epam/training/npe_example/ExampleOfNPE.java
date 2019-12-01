@@ -5,7 +5,6 @@ public class ExampleOfNPE {
     public static void main(String[] args) {
 
         String name= null;
-
         // 1. Когда возникает ?
         //NPE возникает когда мы хотим вызвать метод через ссылку (переменную) иницилизированную как NULL;
 
@@ -19,7 +18,15 @@ public class ExampleOfNPE {
 
         // Второй случай
         Integer value = null;
-        int size = value;
+        int size = value;  //Unboxing
+       // System.out.println(name.length());
+        // 3. Как бороться?
+        // Используй приметивные типы
+
+
+
+
+
 
 
 
