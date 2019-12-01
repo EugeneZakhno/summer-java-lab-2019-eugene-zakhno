@@ -20,10 +20,12 @@ public class ExampleOfNPE {
         Integer value = null;
         int size = value;  //Unboxing
        // System.out.println(name.length());
+
         // 3. Как бороться?
         // Используй приметивные типы
 
 
+        // 4. Никогда не вовращать null
 
 
 

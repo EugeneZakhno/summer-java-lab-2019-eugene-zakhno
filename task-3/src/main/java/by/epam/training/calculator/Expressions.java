@@ -6,7 +6,6 @@ public class Expressions {
 
         String string = line.replaceAll(" ", "");
 
-
         char [] ch = string.toCharArray();
 
         //читалка
@@ -14,12 +13,5 @@ public class Expressions {
             System.out.print(c + ", ");
         }
 
-
-
-
-
-
-
     }
-
 }

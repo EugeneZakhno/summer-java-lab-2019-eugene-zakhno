@@ -20,7 +20,6 @@ public class StartUI {
         int size = value;  //Unboxing*/
 
 
-
     }
 
 }
