@@ -13,6 +13,8 @@ public class Main {
                     Expressions.calculate(line);
                 }
 
+
+
             } catch (IOException e) {
             e.printStackTrace();
         }

@@ -13,5 +13,13 @@ public class Expressions {
             System.out.print(c + ", ");
         }
 
+        if(line.isEmpty()){
+            nextLine();
+        }
+        public static void nextLine (String line){
+
+        }
+
+
     }
 }
